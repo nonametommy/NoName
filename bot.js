@@ -1,10 +1,5 @@
 const client = new Client({ disableEveryone: true})
 const Discord = require('discord.js');
-const client = new Discord.Client();
-client.on('ready', function(){}, ms);
-  console.log('---------------');
-  console.log('IG Bot Is Online')
-  console.log('---------------')
 const ytdl = require("ytdl-core");
 const convert = require("hh-mm-ss")
 const fs = require('fs');
@@ -13,6 +8,7 @@ const fetchVideoInfo = require("youtube-info");
 const botversion = require('./package.json').version;
 const simpleytapi = require('simple-youtube-api')
 const youtube = new simpleytapi(YT_API_KEY);
+client.login(TOKEN);
 var guilds = {};
 
 client.on('ready', () => {
