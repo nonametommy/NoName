@@ -30,7 +30,21 @@ console.log('Dev Narox by Jackeo')
  
 });
  
- 
+
+lient.on('message', message => {
+  if(message.content.startsWith(prefix + "ping")) {
+message.channel.send(`MessageTaken: `${Date.now() - message.createdTimestamp}`msn DiscordAPi: `${Math.round(client.ping)}`msnAverage: `${Math.round(client.pings[0])}`ms. `)
+}
+});
+
+
+
+
+
+
+
+
+
  
  
  
