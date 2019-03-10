@@ -1,29 +1,42 @@
+const client = new Client({ disableEveryone: true})
 const Discord = require('discord.js');
 const client = new Discord.Client();
 client.on('ready', function(){}, ms);
   console.log('---------------');
   console.log('IG Bot Is Online')
   console.log('---------------')
+const ytdl = require("ytdl-core");
+const convert = require("hh-mm-ss")
+const fs = require('fs');
+const ms = require('ms');
+const fetchVideoInfo = require("youtube-info");
+const botversion = require('./package.json').version;
+const simpleytapi = require('simple-youtube-api')
+const youtube = new simpleytapi(YT_API_KEY);
+var guilds = {};
+
+client.on('ready', () => {
+  client.user.setStatus('dnd')
+  console.log('╔[════════════════════════════════════]╗')
+  console.log(`[Start] ${new Date()}`);
+  console.log('╚[════════════════════════════════════]╝')
+  console.log('')
+  console.log('╔[══════════════════════════]╗');
+  console.log(`Logged in as * [ " ${client.user.username} " ]`);
+  console.log('')
+  console.log('Informations :')
+  console.log('')
+  console.log(`servers! [ " ${client.guilds.size} " ]`);
+  console.log(`Users! [ " ${client.users.size} " ]`);
+  console.log(`channels! [ " ${client.channels.size} " ]`);
+  console.log('╚[══════════════════════════]╝')
+  console.log('')
+  console.log('╔[════════════]╗')
+  console.log(' Bot Is Online')
+  console.log('╚[════════════]╝')
 });
 
 
- client.on('ready', function(){
-    var ms = 4000 ;
-    var setGame = [`%help`,'%play', `By: NoNamé~Tommy#3590`];
-    var i = -1;
-    var j = 0;
-    setInterval(function (){
-        if( i == -1 ){
-            j = 1;
-        }
-        if( i == (setGame.length)-1 ){
-            j = -1;
-        }
-        i = i+j;
-        client.user.setGame(setGame[i],`http://www.twitch.tv/0`);
-    }, ms);
-
-});
 
 const Sra7a = [
      'صراحه  |  صوتك حلوة؟',
