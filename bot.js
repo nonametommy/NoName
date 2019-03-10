@@ -1,8 +1,15 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-client.on('ready', function(){
-    var ms = 10000 ;
-    var setGame = [' %help','IG Bot','Have Fun !',' Iam Here For Games',' %help'];
+client.on('ready', function(){}, ms);
+  console.log('---------------');
+  console.log('IG Bot Is Online')
+  console.log('---------------')
+});
+
+
+ client.on('ready', function(){
+    var ms = 4000 ;
+    var setGame = [`%help`,'%play', `By: NoNamé~Tommy#3590`];
     var i = -1;
     var j = 0;
     setInterval(function (){
@@ -13,15 +20,10 @@ client.on('ready', function(){
             j = -1;
         }
         i = i+j;
-        client.user.setGame(setGame[i],`http://www.twitch.tv/iXMiDo`);
+        client.user.setGame(setGame[i],`http://www.twitch.tv/0`);
     }, ms);
-  console.log('---------------');
-  console.log('IG Bot Is Online')
-  console.log('---------------')
+
 });
-
-
-
 
 const Sra7a = [
      'صراحه  |  صوتك حلوة؟',
